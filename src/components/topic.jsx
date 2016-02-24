@@ -16,16 +16,13 @@ module.exports = React.createClass({
     }
   },
   componentWillMount: function() {
-    // console.log('Topic is about to render and fetch data');
     Actions.getImages(this.props.params.id);
   },
   componentWillReceiveProps: function(nextProps) {
     Actions.getImages(nextProps.params.id);
   },
   render: function() {
-    // console.log('Topic is rendiring with ID', this.props.params.id);
-    // console.log('I have this many images', this.state.images.length);
-    return <div className="text-center">
+    return <div className="topic">
       {this.renderImages()}
     </div>
   },
