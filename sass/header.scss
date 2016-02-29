@@ -17,6 +17,11 @@
     float: left;
   }
 }
+@media (min-width: 768px) {
+  .navbar {
+    height: 90px; 
+  }
+}
 @media (min-width: 1200px) {
   .header {
     display: flex;
