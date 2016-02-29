@@ -1,7 +1,5 @@
 .header {
-  display: flex;
   text-align: center;
-  flex-wrap: wrap;
   .active {
     font-weight: 900;
     outline: none;
@@ -21,6 +19,7 @@
 }
 @media (min-width: 1200px) {
   .header {
+    display: flex;
     .display {
       display: block;
     }
