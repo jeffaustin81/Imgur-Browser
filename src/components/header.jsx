@@ -6,41 +6,35 @@ var TopicStore = require('../stores/topic-store');
 var Reflux = require('reflux');
 
 module.exports = React.createClass({
-  mixins: [
-    Reflux.listenTo(TopicStore, 'onChange')
-  ],
+  mixins: [Reflux.listenTo(TopicStore, 'onChange')],
   getInitialState: function() {
-    return {
-      topics: []
-    }
+    return {topics: []}
   },
   componentWillMount: function() {
     Actions.getTopics();
   },
   render: function() {
     return <nav className="navbar navbar-default header">
-        <div className="container-fluid">
-          <Link to="/" className="navbar-brand">
-            Imgur Browser
-          </Link>
-          <ul className="nav navbar-nav navbar-right">
-            {this.renderTopics()}
-          </ul>
-        </div>
-      </nav>
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand">
+          Imgur Browser
+        </Link>
+        <ul className="nav navbar-nav navbar-right">
+          {this.renderTopics()}
+        </ul>
+      </div>
+    </nav>
   },
   renderTopics: function() {
-    return this.state.topics.slice(0, 4).map(function(topic){
-      return <li key={topic.id}>
-        <Link activeClassName="active" to={"topics/" + topic.id}>
-          {topic.name}
-        </Link>
-      </li>
+    return this.state.topics.map(function(topic) {
+      return <li key={topic.id} className="display nav-items">
+          <Link activeClassName="active" to={"topics/" + topic.id}>
+            {topic.name}
+          </Link>
+        </li>
     });
   },
   onChange: function(event, topics) {
-    this.setState({
-      topics: topics
-    });
+    this.setState({topics: topics});
   }
 })

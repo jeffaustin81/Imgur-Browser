@@ -1,8 +1,31 @@
 .header {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
   .active {
     font-weight: 900;
+    outline: none;
+  }
+  .display {
+    display: none;
+  }
+  a:active {
+    outline: none;
   }
   .navbar-brand {
+    font-size: 1.55em;
     font-weight: 900;
+    outline: none;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    .display {
+      display: block;
+    }
+    .navbar-brand {
+      font-size: 1.25em;
+    }
   }
 }

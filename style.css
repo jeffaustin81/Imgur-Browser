@@ -1,8 +1,25 @@
-.header .active {
-  font-weight: 900; }
+.header {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap; }
+  .header .active {
+    font-weight: 900;
+    outline: none; }
+  .header .display {
+    display: none; }
+  .header a:active {
+    outline: none; }
+  .header .navbar-brand {
+    font-size: 1.55em;
+    font-weight: 900;
+    outline: none;
+    float: left; }
 
-.header .navbar-brand {
-  font-weight: 900; }
+@media (min-width: 1200px) {
+  .header .display {
+    display: block; }
+  .header .navbar-brand {
+    font-size: 1.25em; } }
 
 .image-detail .panel-body {
   text-align: center; }
@@ -30,12 +47,12 @@
     opacity: .6;
     color: #fff; }
   .image-preview img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     display: inline-block; }
   .image-preview video {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     vertical-align: middle;
     background-color: #000; }
 
@@ -49,6 +66,9 @@
 
 .black {
   color: black; }
+
+.list-group-item a:active {
+  outline: none; }
 
 .topic {
   text-align: center; }
