@@ -14,16 +14,17 @@ module.exports = React.createClass({
     Actions.getTopics();
   },
   render: function() {
-    return <nav className="navbar navbar-default header">
+    return (
+      <nav className="navbar navbar-default header">
       <div className="container-fluid">
+        <div className="navbar-header">
         <Link to="/" className="navbar-brand">
-          Imgur Browser
+          imgur browser
         </Link>
-        <ul className="nav navbar-nav navbar-right">
-          {this.renderTopics()}
-        </ul>
+      </div>
       </div>
     </nav>
+  );
   },
   renderTopics: function() {
     return this.state.topics.map(function(topic) {

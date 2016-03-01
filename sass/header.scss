@@ -1,32 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+
 .header {
-  text-align: center;
   .active {
     font-weight: 900;
     outline: none;
   }
-  .display {
-    display: none;
-  }
-  a:active {
-    outline: none;
-  }
   .navbar-brand {
-    font-size: 1.25em;
+    font-size: 1.75em;
     font-weight: 900;
     outline: none;
-    float: left;
-  }
-}
-@media (min-width: 768px) {
-  .navbar {
-    height: 90px; 
-  }
-}
-@media (min-width: 1200px) {
-  .header {
-    display: flex;
-    .display {
-      display: block;
-    }
+    font-family: 'Varela Round', sans-serif;
   }
 }
