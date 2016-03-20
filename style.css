@@ -58,6 +58,9 @@
 .list-group-item a:active {
   outline: none; }
 
+.container {
+  background-color: #9BC43A; }
+
 .topic {
   text-align: center; }
   .topic .image-preview {
